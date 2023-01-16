@@ -1,6 +1,7 @@
 import { View, Text } from "react-native";
 import HomeScreen from "./HomeScreen";
 import AddInventoryScreen from "./AddInventoryScreen";
+import SettingsScreen from "./SettingsScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -42,6 +43,11 @@ const Main = () => {
                     name='Add Inventory'
                     component={AddInventoryScreen}
                     options={{ title: 'Add Inventory' }}
+                />
+                <Tab.Screen
+                    name='Settings'
+                    component={SettingsScreen}
+                    options={{ title: 'Settings' }}
                 />
             </Tab.Navigator>
         </View>
