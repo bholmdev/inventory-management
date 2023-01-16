@@ -3,7 +3,6 @@ import HomeScreen from "./HomeScreen";
 import AddInventoryScreen from "./AddInventoryScreen";
 import SettingsScreen from "./SettingsScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
 
 const Tab = createBottomTabNavigator();
 
@@ -18,11 +17,11 @@ const Tab = createBottomTabNavigator();
 //                 component={HomeSreen}
 //                 options={{ title: 'Home' }}
 //             />
-//             {/* <Stack.Screen
+//             <Stack.Screen
 //                 name='AddInventoryScreen'
 //                 component={AddInventoryScreen}
 //                 options={{ title: 'Add Inventory' }}
-//             /> */}
+//             />
 //         </Stack.Navigator>
 //     )
 // }

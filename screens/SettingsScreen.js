@@ -4,7 +4,7 @@ import React from 'react'
 const SettingsScreen = () => {
   return (
     <View>
-      <Text style={{textAlign:'center', marginTop:40}}>Settings</Text>
+      <Text style={{ textAlign: 'center', marginTop: 40, backgroundColor:"green", padding: 20 }}>Settings</Text>
       <Text>Name: </Text>
       <Text style={{paddingLeft:10}}>(Username)</Text>
       <Text>Email</Text>
