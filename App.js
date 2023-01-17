@@ -1,5 +1,5 @@
-import { View } from "react-native"
-import Main from './screens/MainComponent.js'
+import { View } from "react-native";
+import Main from "./App/screens/MainComponent";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
