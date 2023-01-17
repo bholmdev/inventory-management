@@ -1,0 +1,25 @@
+import colors from "./colors"
+
+export default {
+    addInventoryScreenText: {
+        textAlign: 'center',
+        marginTop: 40,
+        backgroundColor: colors.darkGrey,
+        padding: 20
+    },
+    homeScreenText: {
+        textAlign:'center',
+        marginTop:40,
+        backgroundColor: colors.lightGrey,
+        padding: 20
+    },
+    settingsScreenMainText: {
+        textAlign: 'center',
+        marginTop: 40,
+        backgroundColor: colors.green,
+        padding: 20
+    },
+    settingsScreenSubText: {
+        paddingLeft: 10
+    }
+}
