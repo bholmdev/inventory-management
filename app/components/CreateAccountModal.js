@@ -1,9 +1,14 @@
+
 import { SafeAreaView, StyleSheet, Text, TextInput } from "react-native";
 
-const LoginModal = () => {
+const CreateAccountModal = () => {
     return (
         <SafeAreaView>
-            <Text style={{ alignSelf: "center" }}>Please Login Below</Text>
+            <Text style={{ alignSelf: "center" }}>Create Your Account Below</Text>
+            <TextInput
+                style={styles.input}
+                placeholder="Email"
+            />
             <TextInput
                 style={styles.input}
                 placeholder="User Name"
@@ -11,6 +16,14 @@ const LoginModal = () => {
             <TextInput
                 style={styles.input}
                 placeholder="Password"
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="Re-Enter Password"
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="Supervisors Email"
             />
         </SafeAreaView>
     );
@@ -25,4 +38,4 @@ const styles = StyleSheet.create({
       },
 })
 
-export default LoginModal;
+export default CreateAccountModal;

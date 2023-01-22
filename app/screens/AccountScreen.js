@@ -3,7 +3,8 @@ import React from 'react';
 import styles from '../config/styles';
 import { Card } from 'react-native-elements';
 import { useState } from 'react';
-import LoginScreen from '../components/LoginModal';
+import LoginModal from '../components/LoginModal';
+import CreateAccountModal from "../components/CreateAccountModal"
 
 const AccountScreen = () => {
   const [loginModalVisible, setLoginModalVisible] = useState(false);
@@ -34,7 +35,7 @@ const AccountScreen = () => {
           }}>
           <View>
             <View>
-              <Text>Future Account Creation Screen!</Text>
+              <CreateAccountModal />
               <Button
                 onPress={() => setCreateModalVisible(!createModalVisible)}
                 title="Close Modal"
@@ -58,7 +59,7 @@ const AccountScreen = () => {
           }}>
           <View>
             <View>
-              <LoginScreen />
+              <LoginModal />
               <Button
                 onPress={() => setLoginModalVisible(!loginModalVisible)}
                 title="Close Screen"
