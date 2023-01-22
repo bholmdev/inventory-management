@@ -54,10 +54,10 @@ const Main = () => {
                     }}
                 />
                 <Tab.Screen
-                    name='Add Inventory'
+                    name='Inventories'
                     component={AddInventoryScreen}
                     options={{ 
-                        title: 'Add Inventory',
+                        title: 'INVENTORIES',
                         tabBarIcon: ({ color }) => (
                             <Icon
                                 name='add-outline'
