@@ -1,9 +1,8 @@
-import { Alert, Button, Modal, Text, TextInput, View } from 'react-native';
+import { Alert, Button, Modal, Text, View } from 'react-native';
 import React from 'react';
 import styles from '../config/styles';
 import { Card } from 'react-native-elements';
 import { useState } from 'react';
-import { Formik } from 'formik';
 
 const AccountScreen = () => {
   const [loginModalVisible, setLoginModalVisible] = useState(false);
