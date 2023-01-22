@@ -57,7 +57,7 @@ const Main = () => {
                     name='Inventories'
                     component={AddInventoryScreen}
                     options={{ 
-                        title: 'INVENTORIES',
+                        title: 'Inventories',
                         tabBarIcon: ({ color }) => (
                             <Icon
                                 name='add-outline'
