@@ -44,7 +44,6 @@ const AccountScreen = () => {
         <Button
           onPress={() => setCreateModalVisible(!createModalVisible)}
           title="Create Account"
-          color="blue"
         />
       </View>
       <View style={{ paddingTop: 15, paddingHorizontal: 90 }}>
@@ -69,7 +68,6 @@ const AccountScreen = () => {
         <Button
           onPress={() => setLoginModalVisible(!loginModalVisible)}
           title="Login"
-          color="green"
         />
       </View>
     </>
