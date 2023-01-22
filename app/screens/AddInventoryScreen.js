@@ -3,7 +3,7 @@ import styles from '../config/styles';
 
 const AddInventoryScreen = () => {
     return (
-        <View>
+        <View style={styles.screenContainer}>
             <Text style={styles.addInventoryScreenText}>New Inventory</Text>
             <Text>+ inventory</Text>
         </View>

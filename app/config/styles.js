@@ -13,6 +13,9 @@ export default {
         backgroundColor: colors.lightGrey,
         padding: 20
     },
+    screenContainer: {
+        marginTop: 10
+    },
     settingsScreenMainText: {
         textAlign: 'center',
         marginTop: 40,
