@@ -1,8 +1,9 @@
-import { Alert, Modal, Text, Pressable, View } from 'react-native';
+import { Alert, Button, Modal, Text, TextInput, View } from 'react-native';
 import React from 'react';
 import styles from '../config/styles';
-import { Button, Card } from 'react-native-elements';
+import { Card } from 'react-native-elements';
 import { useState } from 'react';
+import { Formik } from 'formik';
 
 const AccountScreen = () => {
   const [loginModalVisible, setLoginModalVisible] = useState(false);
@@ -58,6 +59,23 @@ const AccountScreen = () => {
           <View>
             <View>
               <Text>Future Login Screen!</Text>
+              <Formik>
+                <Formik
+                  initialValues={{ email: '' }}
+                  onSubmit={values => console.log(values)}
+                >
+                  {({ handleChange, handleBlur, handleSubmit, values }) => (
+                    <View>
+                      <TextInput
+                        onChangeText={handleChange('email')}
+                        onBlur={handleBlur('email')}
+                        value={values.email}
+                      />
+                      <Button onPress={handleSubmit} title="Submit" />
+                    </View>
+                  )}
+                </Formik>
+              </Formik>
               <Button
                 onPress={() => setLoginModalVisible(!loginModalVisible)}
                 title="Close Modal"
