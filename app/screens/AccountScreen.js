@@ -28,8 +28,8 @@ const AccountScreen = () => {
           transparent={false}
           visible={createModalVisible}
           onRequestClose={() => {
-            Alert.alert('Modal has been closed.');
-            setCreateLoginModalVisible(!createModalVisible);
+            Alert.alert('Account Creations screen has been closed.');
+            setCreateModalVisible(!createModalVisible);
           }}>
           <View>
             <View>
@@ -52,7 +52,7 @@ const AccountScreen = () => {
           transparent={false}
           visible={loginModalVisible}
           onRequestClose={() => {
-            Alert.alert('Modal has been closed.');
+            Alert.alert('Login Screen has been closed.');
             setLoginModalVisible(!loginModalVisible);
           }}>
           <View>
