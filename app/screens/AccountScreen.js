@@ -28,13 +28,13 @@ const AccountScreen = () => {
         <Text style={styles.settingsScreenSubText}>(Please Login to View)</Text>
       </Card>
 
-      <View style={styles.accountButtons}>
+      <View style={styles.buttons}>
         <Button
           onPress={() => setCreateModalVisible(!createModalVisible)}
           title="Create Account"
         />
       </View>
-      <View style={styles.accountButtons}>
+      <View style={styles.buttons}>
         <Button
           onPress={() => setLoginModalVisible(!loginModalVisible)}
           title="Login"
@@ -50,13 +50,13 @@ const AccountScreen = () => {
           setCreateModalVisible(!createModalVisible);
         }}>
         <CreateAccountModal />
-        <View style={styles.accountButtons}>
+        <View style={styles.buttons}>
           <Button
             onPress={() => console.log("Create Account Clicked")}
             title="Create Account"
           />
         </View>
-        <View style={styles.accountButtons}>
+        <View style={styles.buttons}>
           <Button
             onPress={() => setCreateModalVisible(!createModalVisible)}
             title="Close Screen"
@@ -72,13 +72,13 @@ const AccountScreen = () => {
           setLoginModalVisible(!loginModalVisible);
         }}>
         <LoginModal />
-        <View style={styles.accountButtons}>
+        <View style={styles.buttons}>
           <Button
             onPress={() => console.log("Login Clicked")}
             title="Login"
           />
         </View>
-        <View style={styles.accountButtons}>
+        <View style={styles.buttons}>
           <Button
             onPress={() => setLoginModalVisible(!loginModalVisible)}
             title="Close Screen"

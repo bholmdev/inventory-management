@@ -1,15 +1,15 @@
 import colors from "./colors"
 
 export default {
-    accountButtons: {
-        paddingTop: 15,
-        paddingHorizontal: 90
-    },
     addInventoryScreenText: {
         textAlign: 'center',
         marginTop: 40,
         backgroundColor: colors.darkGrey,
         padding: 20
+    },
+    buttons: {
+        paddingTop: 15,
+        paddingHorizontal: 90
     },
     homeScreenText: {
         textAlign: 'center',
