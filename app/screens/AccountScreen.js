@@ -1,0 +1,79 @@
+import { Alert, Button, Modal, Text, View } from 'react-native';
+import React from 'react';
+import styles from '../config/styles';
+import { Card } from 'react-native-elements';
+import { useState } from 'react';
+import LoginModal from '../components/LoginModal';
+import CreateAccountModal from "../components/CreateAccountModal"
+
+const AccountScreen = () => {
+  const [loginModalVisible, setLoginModalVisible] = useState(false);
+  const [createModalVisible, setCreateModalVisible] = useState(false);
+
+  return (
+    <>
+      <Card containerStyle={{ margin: 0, marginTop: 50 }}>
+        <Card.Title style={styles.settingsScreenMainText}>Settings</Card.Title>
+        <Card.Divider />
+        <Text>Name: </Text>
+        <Text style={styles.settingsScreenSubText}>(Please Login to View)</Text>
+        <Text>Email</Text>
+        <Text style={styles.settingsScreenSubText}>(Please Login to View)</Text>
+        <Text>Phone</Text>
+        <Text style={styles.settingsScreenSubText}>(Please Login to View)</Text>
+        <Text>Company</Text>
+        <Text style={styles.settingsScreenSubText}>(Please Login to View)</Text>
+      </Card>
+      <View style={{ paddingTop: 15, paddingHorizontal: 90 }}>
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={createModalVisible}
+          onRequestClose={() => {
+            Alert.alert('Account Creations screen has been closed.');
+            setCreateModalVisible(!createModalVisible);
+          }}>
+          <View>
+            <View>
+              <CreateAccountModal />
+              <Button
+                onPress={() => setCreateModalVisible(!createModalVisible)}
+                title="Close Modal"
+              />
+            </View>
+          </View>
+        </Modal>
+        <Button
+          onPress={() => setCreateModalVisible(!createModalVisible)}
+          title="Create Account"
+        />
+      </View>
+      <View style={{ paddingTop: 15, paddingHorizontal: 90 }}>
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={loginModalVisible}
+          onRequestClose={() => {
+            Alert.alert('Login Screen has been closed.');
+            setLoginModalVisible(!loginModalVisible);
+          }}>
+          <View>
+            <View>
+              <LoginModal />
+              <Button
+                onPress={() => setLoginModalVisible(!loginModalVisible)}
+                title="Close Screen"
+              />
+            </View>
+          </View>
+        </Modal>
+        <Button
+          onPress={() => setLoginModalVisible(!loginModalVisible)}
+          title="Login"
+        />
+      </View>
+    </>
+  );
+};
+
+export default AccountScreen
