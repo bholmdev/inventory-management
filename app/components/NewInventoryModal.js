@@ -16,8 +16,8 @@ const NewInventoryModal = () => {
             />
             <TextInput
                 style={styles.input}
-                placeholder="description"
-                onChangeTest={description => setDescription(description)}
+                placeholder="Description"
+                onChangeText={description => setDescription(description)}
                 value={description}
             />
         </SafeAreaView>
