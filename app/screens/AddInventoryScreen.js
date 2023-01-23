@@ -1,7 +1,6 @@
-import { Text, View, Button, Modal } from 'react-native';
+import { Text, View, Button, Modal, Alert } from 'react-native';
 import { useState } from 'react';
 import styles from '../config/styles';
-import { Input } from 'react-native-elements';
 import NewInventoryModal from '../components/NewInventoryModal';
 
 const AddInventoryScreen = () => {
@@ -19,8 +18,8 @@ const AddInventoryScreen = () => {
                     transparent={false}
                     visible={showNewInvModal}
                     onRequestClose={() => {
-                        Alert.alert('Account Creations screen has been closed.');
-                        setCreateModalVisible(!showNewInvModal);
+                        Alert.alert('New Inventory cancelled.');
+                        setShowNewInvModal(!showNewInvModal);
                     }}>
                     <View>
                         <View>
