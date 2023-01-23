@@ -15,6 +15,7 @@ const AccountScreen = () => {
       <Card containerStyle={{ margin: 0, marginTop: 50 }}>
         <Card.Title style={styles.settingsScreenMainText}>Settings</Card.Title>
         <Card.Divider />
+        {/* Insert Image Here */}
         <Text>Name: </Text>
         <Text style={styles.settingsScreenSubText}>(Please Login to View)</Text>
         <Text>Email</Text>
@@ -23,7 +24,10 @@ const AccountScreen = () => {
         <Text style={styles.settingsScreenSubText}>(Please Login to View)</Text>
         <Text>Company</Text>
         <Text style={styles.settingsScreenSubText}>(Please Login to View)</Text>
+        <Text>Department</Text>
+        <Text style={styles.settingsScreenSubText}>(Please Login to View)</Text>
       </Card>
+
       <View style={styles.accountButtons}>
         <Button
           onPress={() => setCreateModalVisible(!createModalVisible)}
@@ -31,12 +35,12 @@ const AccountScreen = () => {
         />
       </View>
       <View style={styles.accountButtons}>
-
         <Button
           onPress={() => setLoginModalVisible(!loginModalVisible)}
           title="Login"
         />
       </View>
+      
       <Modal
         animationType="slide"
         transparent={false}
