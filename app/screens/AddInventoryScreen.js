@@ -8,7 +8,7 @@ const AddInventoryScreen = () => {
     const [showNewInvModal, setShowNewInvModal] = useState(false)
 
     return (
-        <View style={styles.screenContainer}>
+        <>
             <Card containerStyle={{ margin: 0, marginTop: 50 }}>
                 <Card.Title style={styles.settingsScreenMainText}>Inventories</Card.Title>
                 <Card.Divider />
@@ -51,7 +51,7 @@ const AddInventoryScreen = () => {
                     title="Create New Inventory"
                 />
             </View>
-        </View>
+        </>
     )
 }
 
