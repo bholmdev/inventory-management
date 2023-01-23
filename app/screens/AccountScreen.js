@@ -24,54 +24,63 @@ const AccountScreen = () => {
         <Text>Company</Text>
         <Text style={styles.settingsScreenSubText}>(Please Login to View)</Text>
       </Card>
-      <View style={{ paddingTop: 15, paddingHorizontal: 90 }}>
-        <Modal
-          animationType="slide"
-          transparent={false}
-          visible={createModalVisible}
-          onRequestClose={() => {
-            Alert.alert('Account Creations screen has been closed.');
-            setCreateModalVisible(!createModalVisible);
-          }}>
-          <View>
-            <View>
-              <CreateAccountModal />
-              <Button
-                onPress={() => setCreateModalVisible(!createModalVisible)}
-                title="Close Modal"
-              />
-            </View>
-          </View>
-        </Modal>
+      <View style={styles.accountButtons}>
         <Button
           onPress={() => setCreateModalVisible(!createModalVisible)}
           title="Create Account"
         />
       </View>
-      <View style={{ paddingTop: 15, paddingHorizontal: 90 }}>
-        <Modal
-          animationType="slide"
-          transparent={false}
-          visible={loginModalVisible}
-          onRequestClose={() => {
-            Alert.alert('Login Screen has been closed.');
-            setLoginModalVisible(!loginModalVisible);
-          }}>
-          <View>
-            <View>
-              <LoginModal />
-              <Button
-                onPress={() => setLoginModalVisible(!loginModalVisible)}
-                title="Close Screen"
-              />
-            </View>
-          </View>
-        </Modal>
+      <View style={styles.accountButtons}>
+
         <Button
           onPress={() => setLoginModalVisible(!loginModalVisible)}
           title="Login"
         />
       </View>
+      <Modal
+        animationType="slide"
+        transparent={false}
+        visible={createModalVisible}
+        onRequestClose={() => {
+          Alert.alert('Account Creations screen has been closed.');
+          setCreateModalVisible(!createModalVisible);
+        }}>
+        <CreateAccountModal />
+        <View style={styles.accountButtons}>
+          <Button
+            onPress={() => console.log("Create Account Clicked")}
+            title="Create Account"
+          />
+        </View>
+        <View style={styles.accountButtons}>
+          <Button
+            onPress={() => setCreateModalVisible(!createModalVisible)}
+            title="Close Screen"
+          />
+        </View>
+      </Modal>
+      <Modal
+        animationType="slide"
+        transparent={false}
+        visible={loginModalVisible}
+        onRequestClose={() => {
+          Alert.alert('Login Screen has been closed.');
+          setLoginModalVisible(!loginModalVisible);
+        }}>
+        <LoginModal />
+        <View style={styles.accountButtons}>
+          <Button
+            onPress={() => console.log("Login Clicked")}
+            title="Login"
+          />
+        </View>
+        <View style={styles.accountButtons}>
+          <Button
+            onPress={() => setLoginModalVisible(!loginModalVisible)}
+            title="Close Screen"
+          />
+        </View>
+      </Modal>
     </>
   );
 };
