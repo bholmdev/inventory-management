@@ -31,14 +31,18 @@ const AddInventoryScreen = () => {
                     <View>
                         <View>
                             <NewInventoryModal />
-                            <Button
-                                title="Submit"
-                                onPress={() => setShowNewInvModal(!showNewInvModal)}
-                            />
-                            <Button
-                                onPress={() => setShowNewInvModal(!showNewInvModal)}
-                                title="Close Modal"
-                            />
+                            <View style={styles.buttons}>
+                                <Button
+                                    title="Submit"
+                                    onPress={() => console.log("Clicked Submit")}
+                                />
+                            </View>
+                            <View style={styles.buttons}>
+                                <Button
+                                    onPress={() => setShowNewInvModal(!showNewInvModal)}
+                                    title="Close Screen"
+                                />
+                            </View>
                         </View>
                     </View>
                 </Modal>
