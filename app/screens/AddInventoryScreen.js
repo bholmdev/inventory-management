@@ -2,6 +2,7 @@ import { Text, View, Button, Modal } from 'react-native';
 import { useState } from 'react';
 import styles from '../config/styles';
 import { Input } from 'react-native-elements';
+import NewInventoryModal from '../components/NewInventoryModal';
 
 const AddInventoryScreen = () => {
     const [showNewInvModal, setShowNewInvModal] = useState(false)
@@ -23,14 +24,10 @@ const AddInventoryScreen = () => {
                     }}>
                     <View>
                         <View>
-                            <Input
-                                placeholder='Inventory Name'
-                            />
-                            <Input
-                                placeholder='add item'
-                            />
+                            <NewInventoryModal />
                             <Button
                                 title="Submit"
+                                onPress={() => setShowNewInvModal(!showNewInvModal)}
                             />
                             <Button
                                 onPress={() => setShowNewInvModal(!showNewInvModal)}
