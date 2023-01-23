@@ -60,7 +60,7 @@ const Main = () => {
                         title: 'Inventories',
                         tabBarIcon: ({ color }) => (
                             <Icon
-                                name='add-outline'
+                                name='document'
                                 type='ionicon'
                                 size={24}
                                 iconStyle={{ width: 24 }}
