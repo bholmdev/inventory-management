@@ -1,5 +1,6 @@
 import { View, Text } from "react-native";
 import styles from "../config/styles";
+import HomeOption from "../components/HomeOption";
 
 const HomeScreen = () => {
     return (
@@ -7,6 +8,7 @@ const HomeScreen = () => {
         <View style={styles.screenContainer}>
             <Text style={styles.homeScreenText}>Home</Text>
             <Text>List of inventories rendered below:</Text>
+            <HomeOption />
         </View>
     )
 }
