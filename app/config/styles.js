@@ -16,7 +16,7 @@ export default {
         marginTop: 40,
         backgroundColor: colors.blue,
         padding: 10,
-        color: 'white',
+        color: colors.darkGrey,
         fontSize: 44
     },
     screenContainer: {
@@ -34,7 +34,7 @@ export default {
     homeOptionCard: {
         padding: 30,
         margin: 40,
-        borderRadius: 22,
+        borderRadius: 14,
         backgroundColor: colors.green,
         color: 'white',
         shadowColor: "#000",
