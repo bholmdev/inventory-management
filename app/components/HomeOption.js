@@ -1,5 +1,6 @@
 import { View, Text } from "react-native";
 import { Card, Icon } from "react-native-elements";
+import colors from "../config/colors";
 import styles from "../config/styles";
 
 const HomeOption = ( {title, icon} ) => {
@@ -12,10 +13,9 @@ const HomeOption = ( {title, icon} ) => {
                         type='ionicon'
                         size={25}
                         iconStyle={{ width: 24 }}
-                        color='white'
-                        
+                        color={colors.accent}
                     />
-                    {title}  
+                   {title}  
                 </Text>
             </Card>
         </View>

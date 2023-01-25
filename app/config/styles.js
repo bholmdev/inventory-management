@@ -34,18 +34,18 @@ export default {
     homeOptionCard: {
         padding: 30,
         margin: 40,
-        borderRadius: 6,
+        borderRadius: 22,
         backgroundColor: colors.green,
         color: 'white',
         shadowColor: "#000",
         shadowOffset: {
-            width: 7,
-            height: 7,
+            width: 0,
+            height: 9,
         },
-        shadowOpacity: .5,
-        shadowRadius: 9.51,
-
-        elevation: 24,
+        shadowOpacity: 0.50,
+        shadowRadius: 12.35,
+        
+        elevation: 19,
     },
     homeOptionCardText: {
         color: colors.lightGrey,
