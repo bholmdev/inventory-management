@@ -1,11 +1,22 @@
 import { View, Text } from "react-native";
-import { Card } from "react-native-elements";
+import { Card, Icon } from "react-native-elements";
+import styles from "../config/styles";
 
-const HomeOption = () => {
+const HomeOption = ( {title, icon} ) => {
     return (
         <View style={{justifyContent: 'center'}}>
-            <Card containerStyle={{padding:30, margin:40}}>
-                <Text style={{textAlign: 'center'}}>Homepage functions</Text>
+            <Card containerStyle={styles.homeOptionCard}>     
+                <Text style={styles.homeOptionCardText}>
+                    <Icon
+                        name={icon}
+                        type='ionicon'
+                        size={25}
+                        iconStyle={{ width: 24 }}
+                        color='white'
+                        
+                    />
+                    {title}  
+                </Text>
             </Card>
         </View>
     )

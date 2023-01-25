@@ -14,8 +14,10 @@ export default {
     homeScreenText: {
         textAlign: 'center',
         marginTop: 40,
-        backgroundColor: colors.lightGrey,
-        padding: 20
+        backgroundColor: colors.blue,
+        padding: 10,
+        color: 'white',
+        fontSize: 44
     },
     screenContainer: {
         marginTop: 10
@@ -28,5 +30,26 @@ export default {
     },
     settingsScreenSubText: {
         paddingLeft: 10
+    },
+    homeOptionCard: {
+        padding: 30,
+        margin: 40,
+        borderRadius: 6,
+        backgroundColor: colors.green,
+        color: 'white',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 7,
+            height: 7,
+        },
+        shadowOpacity: .5,
+        shadowRadius: 9.51,
+
+        elevation: 24,
+    },
+    homeOptionCardText: {
+        color: colors.lightGrey,
+        textAlign: 'center',
+        fontSize: 20
     }
 }

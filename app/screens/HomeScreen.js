@@ -6,9 +6,12 @@ const HomeScreen = () => {
     return (
         //view has a bcakground color so that we can see where the different views' borders are. [delete/ change later]
         <View style={styles.screenContainer}>
-            <Text style={styles.homeScreenText}>Home</Text>
-            <Text>List of inventories rendered below:</Text>
-            <HomeOption />
+            <Text style={styles.homeScreenText}>Dashboard</Text>
+            <HomeOption title='Homepage functions' />
+            <HomeOption 
+                title=' Low Inventory Items' 
+                icon='battery-half' />
+            <HomeOption title='Some Other Option here' />
         </View>
     )
 }
