@@ -1,3 +1,4 @@
+import React from "react";
 import { View } from "react-native";
 import HomeScreen from "./HomeScreen";
 import AddInventoryScreen from "./AddInventoryScreen";
@@ -6,26 +7,6 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "react-native-elements";
 
 const Tab = createBottomTabNavigator();
-
-// const HomeNavigator = () => {
-//     const Stack = createStackNavigator();
-//     return (
-//         <Stack.Navigator
-//             // initialRouteName="HomeScreen"
-//         >
-//             <Stack.Screen
-//                 name='Home'
-//                 component={HomeSreen}
-//                 options={{ title: 'Home' }}
-//             />
-//             <Stack.Screen
-//                 name='AddInventoryScreen'
-//                 component={AddInventoryScreen}
-//                 options={{ title: 'Add Inventory' }}
-//             />
-//         </Stack.Navigator>
-//     )
-// }
 
 const Main = () => {
     return (
@@ -45,7 +26,7 @@ const Main = () => {
                         tabBarIcon: ({ color }) => (
                             <Icon
                                 name='home'
-                                type='ionicon'
+                                type='font-awesome'
                                 size={24}
                                 iconStyle={{ width: 24 }}
                                 color={color}

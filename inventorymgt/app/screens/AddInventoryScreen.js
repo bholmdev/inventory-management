@@ -1,3 +1,4 @@
+import React from "react";
 import { Text, View, Button, Modal, Alert } from 'react-native';
 import { Card } from 'react-native-elements';
 import { useState } from 'react';

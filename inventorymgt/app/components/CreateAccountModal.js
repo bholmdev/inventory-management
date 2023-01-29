@@ -1,4 +1,4 @@
-
+import React from "react";
 import { SafeAreaView, StyleSheet, Text, TextInput } from "react-native";
 
 const CreateAccountModal = () => {

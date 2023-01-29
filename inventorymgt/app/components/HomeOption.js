@@ -1,3 +1,4 @@
+import React from "react";
 import { View, Text } from "react-native";
 import { Card, Icon } from "react-native-elements";
 import colors from "../config/colors";
