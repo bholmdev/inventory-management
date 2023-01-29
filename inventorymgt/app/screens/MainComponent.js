@@ -40,7 +40,7 @@ const Main = () => {
                 <Tab.Screen
                     name='Home'
                     component={HomeScreen}
-                    options={{ 
+                    options={{
                         title: 'Home',
                         tabBarIcon: ({ color }) => (
                             <Icon
@@ -56,7 +56,7 @@ const Main = () => {
                 <Tab.Screen
                     name='Inventories'
                     component={AddInventoryScreen}
-                    options={{ 
+                    options={{
                         title: 'Inventories',
                         tabBarIcon: ({ color }) => (
                             <Icon
@@ -72,7 +72,7 @@ const Main = () => {
                 <Tab.Screen
                     name='Account'
                     component={AccountScreen}
-                    options={{ 
+                    options={{
                         title: 'Account',
                         tabBarIcon: ({ color }) => (
                             <Icon
