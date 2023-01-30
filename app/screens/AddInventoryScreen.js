@@ -1,20 +1,21 @@
 import React from "react";
-import { Text, View, Button, Modal, Alert } from 'react-native';
+import { Text, View, Button, FlatList, Modal, SafeAreaView, TextInput, Alert } from 'react-native';
 import { Card } from 'react-native-elements';
 import { useState } from 'react';
 import styles from '../config/styles';
-import NewInventoryModal from '../components/NewInventoryModal';
 
 const AddInventoryScreen = () => {
-    const [showNewInvModal, setShowNewInvModal] = useState(false)
+    const [inventoryName, setInventoryName] = useState('');
+    const [description, setDescription] = useState('');
+    const [showNewInvModal, setShowNewInvModal] = useState(false);
 
     return (
         <View style={styles.screenContainer}>
             <Card containerStyle={{ margin: 0, marginTop: 50 }}>
                 <Card.Title style={styles.settingsScreenMainText}>Inventories</Card.Title>
                 <Card.Divider />
-                <Text>Inventory 1</Text>
-                <Text style={styles.settingsScreenSubText}>Description goes here?</Text>
+                <Text>{inventoryName}</Text>
+                <Text style={styles.settingsScreenSubText}>{description}</Text>
                 <Text>Inventory 2</Text>
                 <Text style={styles.settingsScreenSubText}>Description goes here</Text>
                 <Text>Inventory 3</Text>
@@ -30,21 +31,36 @@ const AddInventoryScreen = () => {
                         setShowNewInvModal(!showNewInvModal);
                     }}>
                     <View>
-                        <View>
-                            <NewInventoryModal />
+                        <SafeAreaView>
+                            <Text style={{ alignSelf: "center" }}>New Inventory</Text>
+                            <TextInput
+                                style={styles.input}
+                                placeholder="Inventory Name"
+                                onChangeText={setInventoryName}
+                                value={inventoryName}
+                            />
+                            <TextInput
+                                style={styles.input}
+                                placeholder="Description"
+                                onChangeText={setDescription}
+                                value={description}
+                            />
                             <View style={styles.buttons}>
                                 <Button
                                     title="Submit"
-                                    onPress={() => console.log("Clicked Submit")}
+                                    onPress={() => {
+                                        console.log("Submitted Name: " + inventoryName)
+                                        setShowNewInvModal(!showNewInvModal)
+                                    }}
                                 />
                             </View>
                             <View style={styles.buttons}>
                                 <Button
-                                    onPress={() => setShowNewInvModal(!showNewInvModal)}
                                     title="Close Screen"
+                                    onPress={() => setShowNewInvModal(!showNewInvModal)}
                                 />
                             </View>
-                        </View>
+                        </SafeAreaView>
                     </View>
                 </Modal>
                 <Button

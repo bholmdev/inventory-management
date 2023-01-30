@@ -19,6 +19,12 @@ export default {
         color: colors.darkGrey,
         fontSize: 44
     },
+    input: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+    },
     screenContainer: {
         marginTop: 10
     },
